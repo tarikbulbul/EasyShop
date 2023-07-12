@@ -2,7 +2,7 @@ import { FiHeart, FiShoppingCart } from "react-icons/fi";
 
 const Navbar = () => {
     return (
-        <div className="py-4 border-b sticky top-0 left-0 right-0 bg-white/40 backdrop-blur-sm">
+        <div className="py-4 border-b sticky z-50 top-0 left-0 right-0 bg-white/40 backdrop-blur-sm">
             <div className="flex items-center justify-between max-w-[1024px] mx-auto">
 				<p className="font-bold text-2xl">Easyshop</p>
 				<div className="flex items-center justify-between space-x-4">
