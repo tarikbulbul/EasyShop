@@ -18,7 +18,7 @@ const Navbar = () => {
 							<span className="text-xs">1</span>
 						</div>
 					</button>
-					<button className="btn-secondary">
+					<button className="btn btn-secondary">
 						Login
 					</button>
 				</div>
