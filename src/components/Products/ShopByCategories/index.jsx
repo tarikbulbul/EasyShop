@@ -1,13 +1,24 @@
-import { Button, ButtonGroup, Center, } from "@chakra-ui/react";
-import { useState } from "react";
+import { Button, ButtonGroup, Center, filter, } from "@chakra-ui/react";
+import { useState, useEffect } from "react";
 import { FaMale, FaFemale } from "react-icons/fa";
 import { GiBigDiamondRing } from "react-icons/gi";
 import { ImHeadphones } from "react-icons/im";
+import { useDispatch, useSelector } from "react-redux";
+import { productsSelector } from "../../../features/products/productsSlice";
 import ProductList from "../../List/ProductList";
 
 const ShopByCategories = () => {
-  const [filterType, setFilterType] = useState("Men's Clothing");
-  
+  const [filterType, setFilterType] = useState("men's clothing");
+  const [filteredProducts, setFilteredProducts] = useState([]);
+
+  const { products } = useSelector(productsSelector);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    const filteredData = products.filter((p) => p.category === filterType);
+    setFilteredProducts(filteredData);
+  }, [filterType, products]);
+
   return (
     <div>
       <h1 className="text-3xl font-Poppins font-bold mb-5 text-center">
@@ -17,39 +28,43 @@ const ShopByCategories = () => {
         <ButtonGroup size="sm" isAttached variant="outline">
           <Button
             onClick={(e) => setFilterType(e.target.name)}
-            name="Men's Clothing"
+            className="!font-Poppins"
+            name="men's clothing"
             leftIcon={<FaMale />}
-            isDisabled={filterType === "Men's Clothing"}
+            isDisabled={filterType === "men's clothing"}
           >
             Men's Clothing
           </Button>
           <Button
             onClick={(e) => setFilterType(e.target.name)}
-            name="Women's Clothing"
+            className="!font-Poppins"
+            name="women's clothing"
             leftIcon={<FaFemale />}
-            isDisabled={filterType === "Women's Clothing"}
+            isDisabled={filterType === "women's clothing"}
           >
             Women's Clothing
           </Button>
           <Button
             onClick={(e) => setFilterType(e.target.name)}
-            name="Electronics"
+            className="!font-Poppins"
+            name="electronics"
             leftIcon={<ImHeadphones />}
-            isDisabled={filterType === "Electronics"}
+            isDisabled={filterType === "electronics"}
           >
             Electronics
           </Button>
           <Button
             onClick={(e) => setFilterType(e.target.name)}
-            name="Jewelleries"
+            className="!font-Poppins"
+            name="jewelery"
             leftIcon={<GiBigDiamondRing />}
-            isDisabled={filterType === "Jewelleries"}
+            isDisabled={filterType === "jewelery"}
           >
             Jewelleries
           </Button>
         </ButtonGroup>
       </Center>
-      <ProductList type={filterType} />
+      <ProductList filteredProducts={filteredProducts} />
     </div>
   );
 };
