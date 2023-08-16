@@ -43,7 +43,7 @@ const WishlistModal = () => {
                         {likedProducts.length > 0 ? (
                             <WishList likedProducts={likedProducts} />
                         ) : (
-                            "Oops nothing here..."
+                            <p className="text-gray-700 text-center">Your wishlist is empty 🙁</p>
                         )}
                     </ModalBody>
 
