@@ -1,4 +1,4 @@
-import ProductCard from "../../Cards/ProductCard";
+import ProductCard from '../../Cards/ProductCard';
 
 const ProductList = ({ filteredProducts }) => {
     return (

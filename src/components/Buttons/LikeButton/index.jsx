@@ -6,7 +6,7 @@ import {
     addToWishlist,
     productsSelector,
     removeFromWishlist,
-  } from "../../../features/products/productsSlice";
+  } from '../../../features/products/productsSlice';
 import { userSelector } from '../../../features/user/userSlice';
 
 const LikeButton = ({ productId }) => {
@@ -47,7 +47,7 @@ const LikeButton = ({ productId }) => {
             <button
             disabled={!isLoggedIn}
             onClick={() => handleLike()}
-            className='border rounded-full p-2 disabled:cursor-not-allowed disabled:opacity-50'
+            className="border rounded-full p-2 disabled:cursor-not-allowed disabled:opacity-50"
             >
                 <FiHeart className={`h-6 w-6 ${isLiked && "fill-red-500 text-red-500"}`} />
             </button>

@@ -1,8 +1,8 @@
 import CartBtn from '../Cart';
 import { Link } from 'react-router-dom';
-import { useDispatch, useSelector } from "react-redux";
-import { userSelector, login, logout } from "../../features/user/userSlice";
-import WishlistModal from "../Modal/WishlistModal";
+import { useDispatch, useSelector } from 'react-redux';
+import { userSelector, login, logout } from '../../features/user/userSlice';
+import WishlistModal from '../Modal/WishlistModal';
 
 const Navbar = () => {
 	const { isLoggedIn } = useSelector(userSelector);

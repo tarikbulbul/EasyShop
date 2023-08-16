@@ -8,13 +8,13 @@ import {
     ModalCloseButton,
     useDisclosure,
     Button,
-  } from "@chakra-ui/react";
-import { FiHeart } from "react-icons/fi";
-import { useDispatch, useSelector } from "react-redux";
+  } from '@chakra-ui/react';
+import { FiHeart } from 'react-icons/fi';
+import { useDispatch, useSelector } from 'react-redux';
 import { productsSelector } from '../../../features/products/productsSlice';
-import WishList from "../../List/Wishlist";;
-import { clearWishList } from "../../../features/products/productsSlice";
-import { userSelector } from "../../../features/user/userSlice";
+import WishList from '../../List/Wishlist';
+import { clearWishList } from '../../../features/products/productsSlice';
+import { userSelector } from '../../../features/user/userSlice';
 
 const WishlistModal = () => {
     const  { likedProducts } = useSelector(productsSelector);

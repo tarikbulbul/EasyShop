@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Badge, Center } from "@chakra-ui/react";
+import { Badge, Center } from '@chakra-ui/react';
 import LikeButton from '../Buttons/LikeButton';
 
 const ProductCard = ({ product }) => {
@@ -21,7 +21,7 @@ const ProductCard = ({ product }) => {
                     </Center>
                 </div>
             </Link>
-            <div className='flex items-center justify-end mt-6'>
+            <div className="flex items-center justify-end mt-6">
                 <LikeButton productId={product.id} />
             </div>
         </div>

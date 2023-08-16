@@ -1,15 +1,15 @@
-import { Button, Center, Spinner, Tag } from "@chakra-ui/react";
-import React, { useEffect, useState } from "react";
-import { useParams } from "react-router";
-import { myAxios } from "../../api/config";
-import { AiTwotoneStar } from "react-icons/ai";
-import { FaShoppingCart } from "react-icons/fa";
-import { BsLightningFill } from "react-icons/bs";
-import Navbar from "../../components/Navbar";
-import ProductList from "../../components/List/ProductList";
-import { useSelector } from "react-redux";
-import { productsSelector } from "../../features/products/productsSlice";
-import { formatToCurrency } from "../../utils/helpers";
+import { Button, Center, Spinner, Tag } from '@chakra-ui/react';
+import React, { useEffect, useState } from 'react';
+import { useParams } from 'react-router';
+import { myAxios } from '../../api/config';
+import { AiTwotoneStar } from 'react-icons/ai';
+import { FaShoppingCart } from 'react-icons/fa';
+import { BsLightningFill } from 'react-icons/bs';
+import Navbar from '../../components/Navbar';
+import ProductList from '../../components/List/ProductList';
+import { useSelector } from 'react-redux';
+import { productsSelector } from '../../features/products/productsSlice';
+import { formatToCurrency } from '../../utils/helpers';
 
 const productInfo = () => {
   const [similarProducts, setSimilarProducts] = useState([]);

@@ -1,4 +1,4 @@
-import Slider from "react-slick";
+import Slider from 'react-slick';
 import ProductCard from '../Cards/ProductCard';
 
 const settings = {

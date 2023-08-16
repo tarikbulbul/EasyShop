@@ -3,7 +3,7 @@ import ShopByCategories from './ShopByCategories';
 
 const Products = () => {
     return (
-        <div id='products' className='space-y-4'>
+        <div id="products" className="space-y-4">
             <AllProducts />
             <ShopByCategories />
         </div>

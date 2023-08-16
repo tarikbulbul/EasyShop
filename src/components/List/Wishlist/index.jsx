@@ -1,10 +1,10 @@
-import { IconButton, Tag, Tooltip } from "@chakra-ui/react";
-import { AiTwotoneStar } from "react-icons/ai";
-import { formatToCurrency } from "../../../utils/helpers";
-import { MdDelete } from "react-icons/md";
-import { useDispatch, useSelector } from "react-redux";
-import { removeFromWishlist }  from "../../../features/products/productsSlice";
-import { userSelector } from "../../../features/user/userSlice";
+import { IconButton, Tag, Tooltip } from '@chakra-ui/react';
+import { AiTwotoneStar } from 'react-icons/ai';
+import { formatToCurrency } from '../../../utils/helpers';
+import { MdDelete } from 'react-icons/md';
+import { useDispatch, useSelector } from 'react-redux';
+import { removeFromWishlist }  from '../../../features/products/productsSlice';
+import { userSelector } from '../../../features/user/userSlice';
 
 const Wishlist = ({ likedProducts }) => {
     const dispatch = useDispatch();

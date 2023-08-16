@@ -9,9 +9,9 @@ import {
     DrawerOverlay,
     Input,
     useDisclosure,
-} from "@chakra-ui/react";
-import { useRef } from "react";
-import { FiShoppingCart } from "react-icons/fi";
+} from '@chakra-ui/react';
+import { useRef } from 'react';
+import { FiShoppingCart } from 'react-icons/fi';
 
 const Cart = () => {
     const { isOpen, onOpen, onClose } = useDisclosure();

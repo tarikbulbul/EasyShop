@@ -1,11 +1,11 @@
-import { Button, ButtonGroup, Center, Spinner } from "@chakra-ui/react";
-import { useState, useEffect } from "react";
-import { FaMale, FaFemale } from "react-icons/fa";
-import { GiBigDiamondRing } from "react-icons/gi";
-import { ImHeadphones } from "react-icons/im";
-import { useSelector } from "react-redux";
-import { productsSelector } from "../../../features/products/productsSlice";
-import ProductList from "../../List/ProductList";
+import { Button, ButtonGroup, Center, Spinner } from '@chakra-ui/react';
+import { useState, useEffect } from 'react';
+import { FaMale, FaFemale } from 'react-icons/fa';
+import { GiBigDiamondRing } from 'react-icons/gi';
+import { ImHeadphones } from 'react-icons/im';
+import { useSelector } from 'react-redux';
+import { productsSelector } from '../../../features/products/productsSlice';
+import ProductList from '../../List/ProductList';
 
 const ShopByCategories = () => {
   const [filterType, setFilterType] = useState("men's clothing");

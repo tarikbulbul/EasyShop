@@ -6,8 +6,8 @@ import ProductInfo from '../pages/ProductInfo';
 const router = () => {
     return (
         <Routes>
-            <Route path='/' element={<Home />} />
-            <Route path='/products/:id' element={<ProductInfo />} />
+            <Route path="/" element={<Home />} />
+            <Route path="/products/:id" element={<ProductInfo />} />
         </Routes>
     );
 };

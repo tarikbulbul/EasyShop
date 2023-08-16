@@ -1,5 +1,5 @@
 import { createAsyncThunk, createSlice, current } from '@reduxjs/toolkit';
-import { myAxios } from "../../api/config";
+import { myAxios } from '../../api/config';
 
 const initialState = {
     products: [],
@@ -23,7 +23,7 @@ export const getAllProducts = createAsyncThunk(
 );
 
 const productSlice = createSlice({
-    name: "products",
+    name: 'products',
     initialState,
     reducers: {
         //add a product to the cart
