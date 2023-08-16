@@ -14,9 +14,12 @@ import { useDispatch, useSelector } from "react-redux";
 import { productsSelector } from '../../../features/products/productsSlice';
 import WishList from "../../List/Wishlist";;
 import { clearWishList } from "../../../features/products/productsSlice";
+import { userSelector } from "../../../features/user/userSlice";
 
 const WishlistModal = () => {
     const  { likedProducts } = useSelector(productsSelector);
+    const { isLoggedIn } = useSelector(userSelector);
+
     const dispatch = useDispatch();
     const { isOpen, onOpen, onClose } = useDisclosure();
 
@@ -49,7 +52,7 @@ const WishlistModal = () => {
                             Close
                         </Button>
                         <Button
-                            isDisabled={!likedProducts.length}
+                            isDisabled={!likedProducts.length || isLoggedIn}
                             onClick={() => dispatch(clearWishList())}
                             variant="solid"
                             colorScheme="blue"
