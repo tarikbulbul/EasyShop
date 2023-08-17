@@ -52,7 +52,7 @@ const WishlistModal = () => {
                             Close
                         </Button>
                         <Button
-                            isDisabled={!likedProducts.length || isLoggedIn}
+                            isDisabled={!likedProducts.length || !isLoggedIn}
                             onClick={() => dispatch(clearWishList())}
                             variant="solid"
                             colorScheme="blue"
