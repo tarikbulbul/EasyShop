@@ -3,9 +3,11 @@ import { useDispatch, useSelector } from 'react-redux';
 import { userSelector, login, logout } from '../../features/user/userSlice';
 import WishlistModal from '../Modal/WishlistModal';
 import { FiShoppingCart } from 'react-icons/fi';
+import { productsSelector } from '../../features/products/productsSlice';
 
 const Navbar = () => {
 	const { isLoggedIn } = useSelector(userSelector);
+	const { cart } = useSelector(productsSelector);
 	const dispatch = useDispatch();
 
 	const handleAuth = () => {
@@ -22,9 +24,11 @@ const Navbar = () => {
 					<WishlistModal />
 					<Link to="/cart" className="relative p-2">
 						<FiShoppingCart className="!h-7 !w-7" />
-						<div className="cart-num">
-							<span className="text-xs">1</span>
-						</div>
+						{cart.length > 0 && (
+							<div className="cart-num">
+								<span className="text-xs">{cart.length}</span>
+							</div>
+						)}
 					</Link>
 					<button onClick={handleAuth} className="btn btn-secondary">
 						{isLoggedIn ? "Logout" : "Login"}
