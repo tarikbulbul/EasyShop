@@ -37,7 +37,7 @@ const CartContent = () => {
                 </TableContainer>
             ) : (
                 <div className="p-4">
-                    <p className="text-center text-xl text-red-500">Oops your cart is empty 😟</p>
+                    <p className="text-center text-xl text-red-500">Oops your cart is empty 😬</p>
                 </div>
             )}
         </div>
