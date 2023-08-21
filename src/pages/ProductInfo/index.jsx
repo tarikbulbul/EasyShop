@@ -13,6 +13,7 @@ import { formatToCurrency } from '../../utils/helpers';
 import { userSelector } from '../../features/user/userSlice';
 import { addToCart } from '../../features/products/productsSlice';
 import CategoryChip from '../../components/Chip/CategoryChip';
+import ImageZoom from '../../components/ImageZoom';
 
 const productInfo = () => {
   const [similarProducts, setSimilarProducts] = useState([]);
@@ -78,11 +79,7 @@ const productInfo = () => {
         <div className="flex space-x-10 justify-between items-start">
             {/* left */}
           <div className="h-[300px] min-w-[300px] flex items-center">
-            <img
-              src={product?.image}
-              alt={product?.title}
-              className="max-h-full object-cover mt-10"
-            />
+            <ImageZoom src={product?.image} alt={product?.title} />
           </div>
 
           {/* right */}
