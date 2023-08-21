@@ -11,7 +11,7 @@ const CartContent = () => {
     );
     
     return (
-        <div className="col-span-3 w-full border rounded-md space-y-5 bg-white shadow-md">
+        <div className="col-span-3 w-full border rounded-sm space-y-5 bg-white shadow-sm">
             <div className="p-4">
                 <h1 className="font-Poppins text-4xl tracking-tighter font-bold text-gray-800">
                     Your Cart <FaShoppingCart className="inline ml-1" />
