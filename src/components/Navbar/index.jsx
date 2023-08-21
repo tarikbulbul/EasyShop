@@ -8,6 +8,9 @@ import { productsSelector } from '../../features/products/productsSlice';
 const Navbar = () => {
 	const { isLoggedIn } = useSelector(userSelector);
 	const { cart } = useSelector(productsSelector);
+	const uniqueCart = cart.filter(
+		(item, index, self) => self.findIndex((t) => t.id === item.id) === index
+	);
 	const dispatch = useDispatch();
 
 	const handleAuth = () => {
@@ -24,9 +27,9 @@ const Navbar = () => {
 					<WishlistModal />
 					<Link to="/cart" className="relative p-2">
 						<FiShoppingCart className="!h-7 !w-7" />
-						{cart.length > 0 && (
+						{uniqueCart.length > 0 && (
 							<div className="cart-num">
-								<span className="text-xs">{cart.length}</span>
+								<span className="text-xs">{uniqueCart.length}</span>
 							</div>
 						)}
 					</Link>
