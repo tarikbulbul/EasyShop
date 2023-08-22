@@ -104,7 +104,13 @@ const productInfo = () => {
                 leftIcon={<FaShoppingCart />}
                 colorScheme="red"
                 variant="solid"
-                onClick={() => dispatch(isPresentInCart ? removeFromCart(id) : addToCart(id))}
+                onClick={() => 
+                  dispatch(
+                    isPresentInCart
+                      ? removeFromCart(id)
+                      : addToCart({id, quantity: 1})
+                  )
+                }
               >
                 {isPresentInCart ? "Remove from cart" : "Add to cart"}
               </Button>

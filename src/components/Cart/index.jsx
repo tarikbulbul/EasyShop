@@ -6,9 +6,6 @@ import CartListItem from '../Items/CartListItem';
 
 const CartContent = () => {
     const { cart } = useSelector(productsSelector);
-    const uniqueCart = cart.filter(
-        (item, index, self) => self.findIndex((t) => t.id === item.id) === index
-    );
     
     return (
         <div className="col-span-3 w-full border rounded-sm space-y-5 bg-white shadow-sm">
@@ -17,7 +14,7 @@ const CartContent = () => {
                     Your Cart <FaShoppingCart className="inline ml-1" />
                 </h1>
             </div>
-            {uniqueCart.length > 0 ? (
+            {cart.length > 0 ? (
                 <TableContainer>
                     <Table variant="simple">
                         <Thead>
@@ -29,7 +26,7 @@ const CartContent = () => {
                             </Tr>
                         </Thead>
                         <Tbody>
-                            {uniqueCart.map((p) => (
+                            {cart.map((p) => (
                                 <CartListItem p={p} key={p.id} />
                             ))}
                         </Tbody>

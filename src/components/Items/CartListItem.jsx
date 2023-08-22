@@ -1,35 +1,27 @@
-import { Button, IconButton, Td, Tr, filter } from '@chakra-ui/react';
+import { Button, IconButton, Td, Tr } from '@chakra-ui/react';
 import { formatToCurrency } from '../../utils/helpers';
 import { MdAdd } from 'react-icons/md';
 import { RiSubtractLine } from 'react-icons/ri';
-import { addToCart,productsSelector, removeFromCart } from '../../features/products/productsSlice';
+import { removeFromCart, increaseQuantity, decreaseQuantity, } from '../../features/products/productsSlice';
 import { useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { updateCart } from '../../features/products/productsSlice';
 
 const CartListItem = ({ p }) => {
-    const { cart } = useSelector(productsSelector);
-    const quantityInCart = cart.filter((product) => product.id === p.id).length;
-
-    const [quantity, setQuantity] = useState(quantityInCart || 1);
+    const [quantity, setQuantity] = useState(p.quantity);
+    
     const dispatch = useDispatch();
 
     const incrementQuantity = () => {
         setQuantity((prev) => prev + 1)
-        dispatch(addToCart(p.id));
+        dispatch(increaseQuantity(p.id));
     }
 
     const decrementQuantity = () => {
         if (quantity === 1) {
-          dispatch(removeFromCart(p.id));
+          dispatch(decreaseQuantity(p.id));
           return;
         }
-        const filteredArray = cart.filter((product) => product.id === p.id);
-        const filteredArray2 = cart.filter((product) => product.id !== p.id);
-        filteredArray.splice(-1, 1);
-
-        dispatch(updateCart(filteredArray.concat(filteredArray2)));
         setQuantity((prev) => prev - 1);
       };
 
