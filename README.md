@@ -1,8 +1,8 @@
 
 # EasyShop
 
-![EasyShop preview](https://github.com/tarikbulbul/test-readme/blob/master/project-preview.png?raw=true)
-![EasyShop preview](https://github.com/tarikbulbul/test-readme/blob/master/project-preview-2.png?raw=true)
+![EasyShop preview](https://github.com/tarikbulbul/EasyShop/blob/main/src/assets/project-preview.png?raw=true)
+![EasyShop preview](https://github.com/tarikbulbul/EasyShop/blob/main/src/assets/project-preview-2.png?raw=true)
 
 This project introduces an e-commerce website developed using React.js. The project allows users to log in, like products, add and remove products from the cart, view the contents of the cart including individual product prices and the total checkout amount, and remove products from the cart.
 
