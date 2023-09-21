@@ -13,6 +13,8 @@ This project introduces an e-commerce website developed using React.js. The proj
 
 **Chakra UI:** A UI kit used for user interface design.
 
+**Tailwind CSS:** A CSS framework and design system used to improve the style and design of web applications.
+
 **Axios:** A library used for making HTTP requests.
 
 **React Icons:** A library used for icons.
@@ -22,6 +24,7 @@ This project introduces an e-commerce website developed using React.js. The proj
 **React Router DOM:** A library used for page routing.
 
 **Fake Store API:** An API used to fetch product data.
+
 
   
 ## Features
